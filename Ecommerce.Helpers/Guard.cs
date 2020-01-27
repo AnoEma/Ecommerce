@@ -7,14 +7,7 @@ using System.Threading.Tasks;
 namespace Ecommerce.Helpers
 {
     public class Guard
-    {
-        public static void ForNullOrEmpty(string value, string msgErro)
-        {
-            if(string.IsNullOrEmpty(value))
-            {
-                throw new Exception(msgErro);
-            }
-        }
+    {   
 
         public static void ForValidId(string propName, Guid id)
         {
@@ -60,14 +53,14 @@ namespace Ecommerce.Helpers
             }
         }
 
-        //public static void ForNullOrEmpty(string value, string errorMessage)
-        //{
-        //    if (String.IsNullOrEmpty(value))
-        //    {
-        //        throw new Exception(errorMessage);
-        //    }
+        public static void ForNullOrEmpty(string value, string errorMessage)
+        {
+            if (String.IsNullOrEmpty(value))
+            {
+                throw new Exception(errorMessage);
+            }
 
-        //}
+        }
 
         public static void StringLength(string propName, string stringValue, int maximum)
         {
@@ -90,9 +83,9 @@ namespace Ecommerce.Helpers
 
         public static void StringLength(string stringValue, int minimum, int maximum, string message)
         {
-            if (String.IsNullOrEmpty(stringValue))
+            if (string.IsNullOrEmpty(stringValue))
             {
-                stringValue = String.Empty;
+                stringValue = string.Empty;
             }
 
             int length = stringValue.Length;

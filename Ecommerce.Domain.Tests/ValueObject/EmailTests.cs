@@ -1,10 +1,7 @@
 ﻿using Ecommerce.Domain.ValueObject;
 using Microsoft.VisualStudio.TestTools.UnitTesting;
 using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
+using Assert = Microsoft.VisualStudio.TestTools.UnitTesting.Assert;
 
 namespace Ecommerce.Domain.Tests.ValueObject
 {
